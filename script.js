@@ -34,12 +34,27 @@
 // Masha.userInf();
 
 //Task 2
-function arrayCut(arr) {
-  while (arr.length > 1) {
-    console.log(`${arr.pop()} осталось [${arr}]`);
-  }
+// function arrayCut(arr) {
+//   while (arr.length > 1) {
+//     console.log(`${arr.pop()} осталось [${arr}]`);
+//   }
 
-  console.log(`${arr[0]}`);
+//   console.log(`${arr[0]}`);
+// }
+
+// arrayCut([1, 2, 3, 4, 5]);
+
+//Task3
+function isPalindrome(word) {
+  let firstPart = word.slice(0, Math.floor(word.length / 2));
+  let secondPart = word
+    .slice(Math.ceil(word.length / 2))
+    .split("")
+    .reverse()
+    .join("");
+
+  return firstPart == secondPart ? true : false;
 }
 
-arrayCut([1, 2, 3, 4, 5]);
+console.log(isPalindrome("довод"));
+console.log(isPalindrome("кружка"));
